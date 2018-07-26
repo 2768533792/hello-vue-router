@@ -1,8 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/home'
-import Foo from '@/components/foo'
-import Bar from '@/components/bar'
+import Home from '@/pages/home'
+import UserSettings from '@/pages/UserSettings'
+import UserEmailsSubscriptions from '@/components/UserEmailsSubscriptions'
+import UserProfile from '@/components/UserProfile'
+import UserProfilePreview from '@/components/UserProfilePreview'
 
 Vue.use(Router)
 
@@ -14,14 +16,21 @@ export default new Router({
       component: Home
     },
     {
-      path: '/foo',
-      name: 'Foo',
-      component: Foo
-    },
-    {
-      path: '/bar',
-      name: 'Bar',
-      component: Bar
+      path: '/settings',
+      component: UserSettings,
+      children: [
+        {
+          path: 'emails',
+          component: UserEmailsSubscriptions
+        },
+        {
+          path: 'profile',
+          components: {
+            default: UserProfile,
+            helper: UserProfilePreview
+          }
+        }
+      ]
     }
   ]
 })

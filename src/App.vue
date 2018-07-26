@@ -1,22 +1,10 @@
 <template>
   <div id="app">
-    {{msg}}
-    <header><a href="javascript:;" @click="goBack">返回</a></header>
-    <ul>
-      <li>
-        <router-link to="/foo">第一个页面</router-link>
-      </li>
-      <li>
-        <router-link to="/bar">第二个页面</router-link>        
-      </li>
-    </ul>
     <router-view/>
   </div>
 </template>
 
 <script>
-import Foo from '@/components/foo'
-import Bar from '@/components/bar'
 export default {
   name: 'App',
   data(){
@@ -25,9 +13,6 @@ export default {
     }
   },
   methods: {
-    goBack() {
-      window.history.length > 1 ? this.$router.go(-1) : this.$router.push('/')
-    }
   }
 }
 </script>
