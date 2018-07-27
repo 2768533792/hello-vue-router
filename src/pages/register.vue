@@ -1,9 +1,8 @@
 <template>
     <div>
-        <h3>预览你的简介</h3>  
+        注册
     </div>
 </template>
-
 <script>
 export default {
     
