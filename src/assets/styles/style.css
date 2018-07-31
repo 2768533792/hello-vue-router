@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+.clearfix::after {
+    content: '';
+    clear: both;
+    display: block;
+    visibility: hidden;
+}
+.weui-tabbar__item {
+    text-decoration: none;
+}
+.banner-item img {
+    width: 100%;
+}
+.indexfloor1 {
+    margin-top: 20px;
+}
+.indexfloor1 .indexfloor1-hd {
+    height: .8rem;
+    line-height: .8rem;
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+.indexfloor1 .indexfloor1-bd-fl {
+    float: left;
+    width: 40%;
+}
+.indexfloor1 .indexfloor1-bd-fr {
+    float: left;
+    width: 60%;
+}
+.indexfloor1 img {
+    width: 100%;
+}
+/* 商品列表 */
+.goods-item-l {
+    width: 30%;
+    float: left;
+}
+.goods-item img {
+    width: 100%;
+}
+.goods-item-r {
+    width: 70%;
+    float: left;
+}
