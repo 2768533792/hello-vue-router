@@ -1,7 +1,6 @@
 <template>
   <div style="height: 100%">
     <view-box>
-      <x-header slot="header" style="position:absolute;width:100%;left:0;top:0;z-index:100;">首页</x-header>
       <router-view />
       <tabbar slot="bottom" style="position: fixed;">
         <tabbar-item icon-class="icon-home" selected link="/">

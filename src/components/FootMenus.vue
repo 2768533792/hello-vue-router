@@ -26,7 +26,6 @@
 </template>
 
 <script>
-import {Tabbar, TabbarItem} from 'vux'
 export default {
     data(){
         return {
@@ -41,8 +40,6 @@ export default {
         }
     },
     components: {
-        Tabbar,
-        TabbarItem
     }
 }
 </script>

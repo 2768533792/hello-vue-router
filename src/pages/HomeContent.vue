@@ -105,7 +105,7 @@
     </div>
 </template>
 <script>
-import {Swiper, SwiperItem} from 'vux'
+import {XHeader, Swiper, SwiperItem} from 'vux'
 
 const bannerList = [
   require('@/assets/img/ban_img1.jpg'),
@@ -124,7 +124,8 @@ export default {
         }
         }
     },
-    components: {  
+    components: {
+        XHeader,
         Swiper,
         SwiperItem
     }

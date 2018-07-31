@@ -1,13 +1,11 @@
 <template>
   <div>
-    <Header></Header>
     <router-view style="top: 46px;position:relative;"></router-view>
     <foot-menus></foot-menus>
   </div>
 </template>
 
 <script>
-import Header from '@/components/Header'
 import FootMenus from '@/components/FootMenus'
 
 export default {
@@ -16,7 +14,6 @@ export default {
     }
   },
   components: {
-    Header,
     FootMenus,
   },
   methods: {

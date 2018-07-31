@@ -1,5 +1,6 @@
 <template>
     <div>
+        <x-header :left-options="{showBack:false}">分类</x-header>
       <div class="category">
           <div class="cate-sidebar">
               <ul>
@@ -55,7 +56,7 @@
 </style>
 
 <script>
-import {XHeader} from 'vux'
+
 export default {
     data(){
         return {
@@ -76,7 +77,6 @@ export default {
         }
     },
     components: {
-        XHeader
     }
 }
 </script>
