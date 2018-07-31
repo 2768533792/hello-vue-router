@@ -16,7 +16,7 @@
           <img slot="icon-active" :src="iconCartOn" />
           <span slot="label">购物车</span>
         </tabbar-item>
-        <tabbar-item link="Member">
+        <tabbar-item link="member">
           <img slot="icon" :src="iconUser" />
           <img slot="icon-active" :src="iconUserOn" />
           <span slot="label">我的</span>
