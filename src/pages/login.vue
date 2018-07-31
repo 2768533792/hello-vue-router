@@ -3,8 +3,8 @@
         <x-header title="登录"></x-header>
         <div>
             <group>
-                <x-input title="用户名" name="username" placeholder="请输入用户名" />
-                <x-input title="密码" type="password" name="password" placeholder="请输入密码" />
+                <x-input title="用户名" name="username" placeholder="请输入用户名" required :min="3" :max="8" v-model="value" text-align="left" label-width="60" />
+                <x-input title="密码" type="password" name="password" placeholder="请输入密码" required text-align="left" label-width="60" />
             </group>
             <div class="pd-wrap mt-20 fix-bottom">
                 <x-button type="primary">登录</x-button>
@@ -32,7 +32,7 @@ import {XHeader, Group, XInput, XButton} from 'vux'
 export default {
     data(){
         return {
-
+            value: ''
         }
     },
     components: {
