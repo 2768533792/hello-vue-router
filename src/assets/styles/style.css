@@ -7,6 +7,12 @@ html, body {
     width: 100%;
     overflow-x: hidden;
 }
+.ta-c {
+    text-align: center;
+}
+.mb-15 {
+    margin-bottom: 15px;
+}
 .clearfix::after {
     content: '';
     clear: both;

@@ -1,5 +1,6 @@
 <template>
     <div>
+        <x-header :left-options="{showBack:false}">首页</x-header>
         <swiper class="banner" dots-position="center">
             <swiper-item class="banner-item" v-for="(item, index) in bannerList" :key="index">
                 <img :src="item" />
@@ -105,8 +106,6 @@
     </div>
 </template>
 <script>
-import {XHeader, Swiper, SwiperItem} from 'vux'
-
 const bannerList = [
   require('@/assets/img/ban_img1.jpg'),
   require('@/assets/img/ban_img2.jpg'),
@@ -125,9 +124,6 @@ export default {
         }
     },
     components: {
-        XHeader,
-        Swiper,
-        SwiperItem
     }
 }
 </script>

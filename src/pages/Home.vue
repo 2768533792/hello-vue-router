@@ -1,6 +1,6 @@
 <template>
   <div>
-    <router-view style="top: 46px;position:relative;"></router-view>
+    <router-view></router-view>
     <foot-menus></foot-menus>
   </div>
 </template>
