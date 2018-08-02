@@ -21,22 +21,38 @@ export default new Router({
   routes: [
     {
       path: '/',
+      name: 'home',
       component: Home,
       children: [
         {
           path: '',
+          name: 'home',
+          meta: {
+            index: 0
+          },
           component: HomeContent
         },
         {
           path: 'category',
           name: 'category',
+          meta: {
+            index: 1
+          },
           component: Category
         },{
           path: '/cart',
+          name: 'cart',
+          meta: {
+            index: 2
+          },
           component: Cart
         },
         {
           path: '/member',
+          name: 'member',
+          meta: {
+            index: 3
+          },
           component: MemberIndex
         },
       ]

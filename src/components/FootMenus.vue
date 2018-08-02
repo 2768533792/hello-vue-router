@@ -1,7 +1,7 @@
 <template>
     <div>
-        <tabbar slot="bottom" style="position: fixed;">
-          <tabbar-item icon-class="icon-home" selected link="/">
+        <tabbar slot="bottom" style="position: fixed;" v-model="$route.meta.index" >
+          <tabbar-item icon-class="icon-home" link="/">
             <img slot="icon" :src="iconHome" />
             <img slot="icon-active" :src="iconHomeOn" />
             <span slot="label">首页</span>

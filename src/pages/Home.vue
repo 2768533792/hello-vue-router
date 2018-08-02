@@ -14,13 +14,7 @@ export default {
     }
   },
   components: {
-    FootMenus,
-  },
-  methods: {
+    FootMenus
   }
 }
 </script>
-
-<style scoped>
-
-</style>
