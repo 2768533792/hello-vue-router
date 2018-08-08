@@ -48,10 +48,17 @@ export default {
     .indexfloor1-bd-fl {
         float: left;
         width: 40%;
+        & > div {
+            height: 188px;
+        }
     }
     .indexfloor1-bd-fr {
         float: left;
         width: 60%;
+        & > div {
+            background: #ddd;
+            height: 94px;
+        }
     }
     img {
         width: 100%;

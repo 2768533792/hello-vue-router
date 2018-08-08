@@ -48,11 +48,18 @@ html, body {
     width: 72%;
     float: left;
     padding: 2%;
+    position: relative;
+    ul {
+        position: relative;
+    }
     li {
         list-style: none;
         display: inline-block;
         height: 36px;
         line-height: 36px;
         padding: 0 10px;
+        &.cate-items-title {
+            display: block;
+        }
     }
 }

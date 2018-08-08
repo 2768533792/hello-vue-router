@@ -1,66 +1,16 @@
 <template>
     <div class="indexfloor3">
-        <div class="indexfloor3-hd">热门推荐</div>
+        <div class="indexfloor3-hd">{{floorTitle}}</div>
         <div class="goods-list">
-            <div class="goods-item clearfix">
-            <div class="goods-item-l">
-                <img :src="indexFloorImgs.img1">
-            </div>
-            <div class="goods-item-r">
-                <div class="goods-title">2018新款夏季连衣裙</div>
-                <div class="goods-subtitle">杨幂同款爆款库存不多抓紧赶快</div>
-                <div class="goods-params">销量：100+</div>
-            </div>
-            </div>
-            <div class="goods-item clearfix">
-            <div class="goods-item-l">
-                <img :src="indexFloorImgs.img1">
-            </div>
-            <div class="goods-item-r">
-                <div class="goods-title">2018新款夏季连衣裙</div>
-                <div class="goods-subtitle">杨幂同款爆款库存不多抓紧赶快</div>
-                <div class="goods-params">销量：100+</div>
-            </div>
-            </div>
-            <div class="goods-item clearfix">
-            <div class="goods-item-l">
-                <img :src="indexFloorImgs.img1">
-            </div>
-            <div class="goods-item-r">
-                <div class="goods-title">2018新款夏季连衣裙</div>
-                <div class="goods-subtitle">杨幂同款爆款库存不多抓紧赶快</div>
-                <div class="goods-params">销量：100+</div>
-            </div>
-            </div>
-            <div class="goods-item clearfix">
-            <div class="goods-item-l">
-                <img :src="indexFloorImgs.img1">
-            </div>
-            <div class="goods-item-r">
-                <div class="goods-title">2018新款夏季连衣裙</div>
-                <div class="goods-subtitle">杨幂同款爆款库存不多抓紧赶快</div>
-                <div class="goods-params">销量：100+</div>
-            </div>
-            </div>
-            <div class="goods-item clearfix">
-            <div class="goods-item-l">
-                <img :src="indexFloorImgs.img1">
-            </div>
-            <div class="goods-item-r">
-                <div class="goods-title">2018新款夏季连衣裙</div>
-                <div class="goods-subtitle">杨幂同款爆款库存不多抓紧赶快</div>
-                <div class="goods-params">销量：100+</div>
-            </div>
-            </div>
-            <div class="goods-item clearfix">
-            <div class="goods-item-l">
-                <img :src="indexFloorImgs.img1">
-            </div>
-            <div class="goods-item-r">
-                <div class="goods-title">2018新款夏季连衣裙</div>
-                <div class="goods-subtitle">杨幂同款爆款库存不多抓紧赶快</div>
-                <div class="goods-params">销量：100+</div>
-            </div>
+            <div class="goods-item clearfix" v-for="(item, index) in floorDatas" :key="index">
+                <div class="goods-item-l">
+                    <img :src="item.src">
+                </div>
+                <div class="goods-item-r">
+                    <div class="goods-title">{{item.title}}</div>
+                    <div class="goods-subtitle">{{item.subtitle}}</div>
+                    <div class="goods-params">价格：{{item.price}}</div>
+                </div>
             </div>
         </div>
     </div>
@@ -68,7 +18,15 @@
 
 <script>
 export default {
-    
+    props: ['floorTitle', 'floorData'],
+    data() {
+        return {
+            floorDatas: []
+        }
+    },
+    created: function() {
+        this.floorDatas = this.floorData
+    }
 }
 </script>
 
@@ -77,7 +35,8 @@ export default {
 .indexfloor3 {
     width: 94%;
     margin: 0 auto;
-    .indexfloor2-hd {
+    margin-top: 20px;
+    .indexfloor3-hd {
         margin-bottom: 20px;
     }
 }
